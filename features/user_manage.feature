@@ -1,7 +1,7 @@
-# features/registration.feature
 
-@user @registration @api
-Feature: User
+
+
+Feature: api user management
 
 
   Scenario Outline: Successful registration of a new user
@@ -9,6 +9,7 @@ Feature: User
     When I retrieve the results
     Then the status code should be 201
     And it should have the field "token" containing the not empty value
+
 
 
     Examples:
