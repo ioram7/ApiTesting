@@ -7,10 +7,10 @@ node {
             sh 'ls -al'
             sh 'pwd'
             sh 'ls -al'
-            sh 'pip3 install -r ApiTesting/requirements.txt'      
+            sh 'pip3 install -r /var/jenkins_home/workspace/pipeline@2/requirements.txt'      
         }
     stage'test'
         node() {
-            sh 'python3 ApiTesting/behave --no-capture'            
+            sh 'python3 /var/jenkins_home/workspace/pipeline@2/behave --no-capture'            
         }
 }
