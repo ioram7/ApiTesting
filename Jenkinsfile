@@ -11,6 +11,6 @@ node {
         }
     stage'test'
         node() {
-            sh '/var/jenkins_home/workspace/pipeline@2/features/behave --no-capture'            
+            sh 'behave --no-capture /var/jenkins_home/workspace/pipeline@2/features'            
         }
 }
