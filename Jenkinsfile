@@ -15,6 +15,7 @@ node {
         }
     stage'deploy'
         node() {
+            sh 'sudo apt-get install zip'			
             sh 'zip -r deploy.zip /var/jenkins_home/workspace/pipeline@2'            
         }
 }
