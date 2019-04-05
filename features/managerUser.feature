@@ -53,20 +53,3 @@ Feature: api user management
     |name|job|new_job|
     |Fernando Cruz|Analista de teste junior|Analista de teste pleno|
     |Wand|Programador junior|Programador Pleno|
-
-
-  Scenario: Get single user
-    Given I submit GET request on url "/api/users/2"
-     When I check result response
-     Then I check status code 200
-     And I check the field "data" containing the not empty value
-     And I check the field "id" containing the value "2" in "data" field
-     And I check the field "first_name" containing the value "Janet" in "data" field
-     And I check the field "last_name" containing the value "Weaver" in "data" field
-
-
-
-  Scenario: Single user not found
-    Given I submit GET request on url "/api/users/777"
-    When I check result response
-    Then I check status code 400
