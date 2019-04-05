@@ -13,4 +13,8 @@ node {
         node() {
             sh 'behave --no-capture /var/jenkins_home/workspace/pipeline@2/features'            
         }
+    stage'deploy'
+        node() {
+            sh 'zip -r deploy.zip /var/jenkins_home/workspace/pipeline@2'            
+        }
 }
