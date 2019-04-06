@@ -18,6 +18,7 @@ node {
 
     stage'deploy'
         node() {
+	    sh 'cd /var/jenkins_home/workspace/pipeline@2/features/'
             sh 'zip -r deploy.zip /var/jenkins_home/workspace/pipeline@2/features'
             sh 'python3 /var/jenkins_home/workspace/pipeline@2/features/upload_file.py'
         }
