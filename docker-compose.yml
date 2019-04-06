@@ -1,7 +1,7 @@
 version: "2"
 services:
   jenkins:
-    image: zasados/jenkins-python3.6
+    image: jenkins:test
     user: root
     ports:
       - "8080:8080"
