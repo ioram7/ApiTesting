@@ -15,6 +15,6 @@ node {
         }
     stage'deploy'
         node() {
-            sh 'zip -r deploy.zip /var/jenkins_home/workspace/pipeline@2'            
+            sh 'zip -r deploy.zip /var/jenkins_home/workspace/pipeline@2'	    	
         }
 }
