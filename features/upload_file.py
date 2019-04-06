@@ -3,7 +3,7 @@ import dropbox
 
 file_name='deploy.zip'
 dropbox_path='/var/jenkins_home/workspace/pipeline@2/'
-dbx=dropbox.Dropbox('KY62MTunDIAAAAAAAAAADNLoux_cL3txFSrc25YVZpUp6TIpcT0psYR9aqNsyomR')
+dbx=dropbox.Dropbox('KY62MTunDIAAAAAAAAAADSjVQZpmPbvnTs-E30swYKUPvB97rAW41FZ1qTV4YZZ4')
 
 
 with open(file_name, 'rb') as f:
