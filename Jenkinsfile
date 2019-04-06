@@ -18,7 +18,7 @@ node {
             sh 'zip -r deploy.zip /var/jenkins_home/workspace/pipeline@2'
 	    sh 'git add /var/jenkins_home/workspace/pipeline@2/deploy.zip'
 	    sh 'git commit'
-	    sh 'git pull '		
+	    sh 'git pull https://github.com/FernandoRLCruz/ApiTesting.git'		
 		
         }
 }
