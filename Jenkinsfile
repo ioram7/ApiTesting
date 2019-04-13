@@ -12,8 +12,9 @@ node {
         }
 
     stage'test'
+	def binpath="/var/jenkins_home/.local/bin"
         node() {
-            sh 'behave --no-capture features'            
+		sh "${binpath}/behave --no-capture features"
         }
 
     stage'deploy'
