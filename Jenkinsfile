@@ -8,18 +8,18 @@ node {
             sh 'ls -al'
             sh 'pwd'
             sh 'ls -al'
-            sh 'pip3 install -r /var/jenkins_home/workspace/pipeline@2/requirements.txt'      
+            sh 'pip3 install -r requirements.txt'      
         }
 
     stage'test'
         node() {
-            sh 'behave --no-capture /var/jenkins_home/workspace/pipeline@2/features'            
+            sh 'behave --no-capture features'            
         }
 
     stage'deploy'
         node() {
-	    sh 'cd /var/jenkins_home/workspace/pipeline@2/features/'
-            sh 'zip -r deploy.zip /var/jenkins_home/workspace/pipeline@2/features'            
+	    sh 'cd features/'
+            sh 'zip -r deploy.zip features'            
         }
         
 }
